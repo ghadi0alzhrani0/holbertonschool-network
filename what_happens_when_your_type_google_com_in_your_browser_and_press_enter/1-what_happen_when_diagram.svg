@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1660" viewBox="0 0 1600 1660" role="img" aria-labelledby="title desc">
+<title id="title">What happens when a browser requests https://www.google.com</title>
+<desc id="desc">DNS returns an IP address. Encrypted HTTPS traffic on TCP port 443 passes a firewall and a load balancer to a web server. Dynamic requests reach an application server, which reads stored data and generates a page. The web server returns the page to the browser.</desc>
+<rect width="1600" height="1660" fill="white"/>
+<text x="80" y="84.56" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#172538">From browser to web page</text>
+<text x="80" y="126.92" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#435268">https://www.google.com  |  A common HTTPS path using TCP</text>
+<rect x="80" y="160" width="500" height="160" rx="12" fill="#F2F6FC" stroke="#172538" stroke-width="2"/>
+<text x="104" y="205.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">Browser</text>
+<text x="104" y="248.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">The user opens the website.</text>
+<text x="104" y="281.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">The browser first needs an IP address.</text>
+<rect x="1040" y="160" width="480" height="160" rx="12" fill="#F2F6FC" stroke="#172538" stroke-width="2"/>
+<text x="1064" y="205.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">1. DNS resolution</text>
+<text x="1064" y="248.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Example IPv4: 216.239.38.120</text>
+<text x="1064" y="281.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">DNS answers can vary.</text>
+<polyline points="580,212 1040,212" fill="none" stroke="#225CA6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1040.00,212.00 1026.70,218.93 1026.70,205.07" fill="#225CA6"/>
+<text x="719" y="195.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#225CA6">DNS query</text>
+<polyline points="1040,286 580,286" fill="none" stroke="#225CA6" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="580.00,286.00 593.30,279.07 593.30,292.93" fill="#225CA6"/>
+<text x="704" y="268.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#225CA6">A / AAAA answer</text>
+<polyline points="330,320 330,470" fill="none" stroke="#225CA6" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="330.00,470.00 323.07,456.70 336.93,456.70" fill="#225CA6"/>
+<text x="400" y="383.92" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#225CA6">Destination: 216.239.38.120:443</text>
+<text x="400" y="421.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#225CA6">HTTPS = HTTP protected by TLS over TCP/IP</text>
+<rect x="80" y="470" width="500" height="160" rx="12" fill="#F5F7FA" stroke="#172538" stroke-width="2"/>
+<text x="104" y="515.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">2. Firewall</text>
+<text x="104" y="558.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Allows the connection on TCP port 443.</text>
+<text x="104" y="591.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Filters traffic using security rules.</text>
+<polyline points="330,630 330,735" fill="none" stroke="#225CA6" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="330.00,735.00 323.07,721.70 336.93,721.70" fill="#225CA6"/>
+<text x="384" y="688.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#225CA6">Encrypted TLS traffic</text>
+<rect x="80" y="735" width="500" height="170" rx="12" fill="#F5F7FA" stroke="#172538" stroke-width="2"/>
+<text x="104" y="780.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">3. Load balancer</text>
+<text x="104" y="823.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Chooses a healthy web server.</text>
+<text x="104" y="856.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Distributes connections across servers.</text>
+<text x="104" y="889.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Passes TLS through in this example.</text>
+<polyline points="580,820 720,820" fill="none" stroke="#225CA6" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="720,820 720,565 860,565" fill="none" stroke="#225CA6" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="860.00,565.00 846.70,571.93 846.70,558.07" fill="#225CA6"/>
+<polyline points="720,820 720,885 860,885" fill="none" stroke="#225CA6" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="860.00,885.00 846.70,891.93 846.70,878.07" fill="#225CA6"/>
+<text x="765" y="549.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#225CA6">TLS</text>
+<text x="765" y="869.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#225CA6">TLS</text>
+<rect x="860" y="470" width="660" height="190" rx="12" fill="#F2F6FC" stroke="#172538" stroke-width="2"/>
+<text x="884" y="515.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">4. Web server A</text>
+<text x="884" y="558.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">TLS ends here; the HTTP request is processed.</text>
+<text x="884" y="591.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Serves a stored page or asks the application.</text>
+<text x="884" y="624.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Returns the web page to the browser.</text>
+<rect x="860" y="790" width="660" height="190" rx="12" fill="#F2F6FC" stroke="#172538" stroke-width="2"/>
+<text x="884" y="835.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">4. Web server B</text>
+<text x="884" y="878.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">TLS ends here; the HTTP request is processed.</text>
+<text x="884" y="911.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Serves a stored page or asks the application.</text>
+<text x="884" y="944.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Returns the web page to the browser.</text>
+<polyline points="1520,565 1560,565 1560,1080 1190,1080" fill="none" stroke="#172538" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1190,980 1190,1080" fill="none" stroke="#172538" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1190,1080 1190,1160" fill="none" stroke="#172538" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1190.00,1160.00 1183.07,1146.70 1196.93,1146.70" fill="#172538"/>
+<text x="1240" y="1060.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#172538">Dynamic requests</text>
+<rect x="860" y="1160" width="660" height="170" rx="12" fill="#F5F7FA" stroke="#172538" stroke-width="2"/>
+<text x="884" y="1205.68" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#172538">5. Application server</text>
+<text x="884" y="1248.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Runs the website logic.</text>
+<text x="884" y="1281.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Requests data and generates HTML when needed.</text>
+<text x="884" y="1314.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Sends the page back to the web server.</text>
+<rect x="80" y="1160" width="500" height="170" rx="12" fill="#F5F7FA" stroke="#172538" stroke-width="2"/>
+<text x="104" y="1204.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172538">6. Database / search index</text>
+<text x="104" y="1248.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Stores data used by the application.</text>
+<text x="104" y="1281.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">Returns data requested by the app.</text>
+<polyline points="860,1210 580,1210" fill="none" stroke="#172538" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="580.00,1210.00 593.30,1203.07 593.30,1216.93" fill="#172538"/>
+<text x="654" y="1191.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#172538">Data query</text>
+<polyline points="580,1280 860,1280" fill="none" stroke="#172538" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="860.00,1280.00 846.70,1286.93 846.70,1273.07" fill="#172538"/>
+<text x="661" y="1316.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#172538">Data result</text>
+<polyline points="80,1390 1520,1390" fill="none" stroke="#BAC5D1" stroke-width="2" stroke-linejoin="round"/>
+<text x="80" y="1448.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172538">THE RESPONSE COMES BACK</text>
+<text x="80" y="1490.92" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#435268">Application -&gt; web server -&gt; load balancer -&gt; firewall -&gt; browser.</text>
+<text x="80" y="1527.08" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#435268">The web server returns the page over TLS. The browser decrypts it and renders HTML, CSS and JavaScript.</text>
+<text x="80" y="1576.24" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#435268">Conceptual service roles, not a map of Google&#x27;s exact internal infrastructure. Cached/static pages may skip app/data work.</text>
+<text x="80" y="1615.16" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#225CA6">HTTP/3 uses QUIC over UDP instead of the TCP path shown here.</text>
+</svg>
